@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{pelicula.titulo}}</h5>
+    <p class="card-text">Descripcion: {{pelicula.descripcion}}</p>
+    <p class="card-text">Genero: {{pelicula.genero}}</p>
+    <p class="card-text"><small class="text-muted">Valoracion: {{pelicula.valoracion}} de 10</small></p>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Escala</label>
+      <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]='valor'>
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+      </select>
+      <button (click)="valorar()">Valorar</button>
+      <br><h3 *ngIf="pelicula.alquilada">Pelicula Alquilada</h3>
+    </div>
+    <button *ngIf="servicioLogin.userActual.usuario!='admin'" (click)="alquilar()">Alquilar</button>
+  </div>
+  <img class="card-img-bottom" src={{pelicula.imagen}} alt="Card image cap">
+</div>

@@ -1,0 +1,28 @@
+
+<div class="card-deck" >
+  <div class="col-sm"   *ngFor="let p of servicioPeli.peliculas">
+    <div style="height: 70vh;width: 45vh; position: relative; left: 0; top: 0;">
+    <img class="card-img-top" src={{p.imagen}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{p.titulo}}</h5>
+      <p class="card-text">{{p.descripcion}}</p>
+      <p class="card-text"><small class="text-muted">Valoracion: {{p.valoracion}} de 10</small></p>
+      <button class="btn btn-info" (click)="verInfo(p)">Ver Info</button><button  (click)="borrar(p)" class="btn btn-danger" *ngIf="servicioLogin.adminlogueado">Borrar</button>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 
+<div class="card-deck" >
+  <div class="card" *ngFor="let p of servicioPeli.peliculas">
+    <img class="card-img-top" src={{p.imagen}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{p.titulo}}</h5>
+      <p class="card-text">{{p.descripcion}}</p>
+      <p class="card-text"><small class="text-muted">Valoracion: {{p.valoracion}} de 10</small></p>
+      <button class="btn btn-info" (click)="verInfo(p)">Ver Info</button><button  (click)="borrar(p)" class="btn btn-danger" *ngIf="servicioLogin.adminlogueado">Borrar</button>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of servicioLogin.usuarios">
+      <th scope="row">{{u.id}}</th>
+      <td>{{u.nombre}}</td>
+      <td>{{u.apellido}}</td>
+      <td>{{u.correo}}</td>
+      <td *ngIf="u.estado">Pelicula Alquilada</td>
+      <td *ngIf="!u.estado">Sin Pelicula Alquilada </td>
+      <td><button class="btn btn-info" (click)="borrar(u.id)">Borrar</button></td>
+    </tr>
+  </tbody>
+</table>

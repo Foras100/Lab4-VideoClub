@@ -1,0 +1,29 @@
+<div class="card-deck" >
+  <div class="card">
+    <img class="card-img-top" src={{pelis[0].imagen}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{pelis[0].titulo}}</h5>
+      <p class="card-text">{{pelis[0].descripcion}}</p>
+      <p class="card-text"><small class="text-muted">Valoracion: {{pelis[0].valoracion}} de 10</small></p>
+      <button class="btn btn-info" (click)="verInfo(pelis[0])">Ver Info</button><button  (click)="borrar(p)" class="btn btn-danger" *ngIf="serviciologin.adminlogueado">Borrar</button>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src={{pelis[1].imagen}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{pelis[1].titulo}}</h5>
+      <p class="card-text">{{pelis[1].descripcion}}</p>
+      <p class="card-text"><small class="text-muted">Valoracion: {{pelis[1].valoracion}} de 10</small></p>
+      <button class="btn btn-info" (click)="verInfo(pelis[1])">Ver Info</button><button  (click)="borrar(p)" class="btn btn-danger" *ngIf="serviciologin.adminlogueado">Borrar</button>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src={{pelis[2].imagen}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{pelis[2].titulo}}</h5>
+      <p class="card-text">{{pelis[2].descripcion}}</p>
+      <p class="card-text"><small class="text-muted">Valoracion: {{pelis[2].valoracion}} de 10</small></p>
+      <button class="btn btn-info" (click)="verInfo(pelis[2])">Ver Info</button><button  (click)="borrar(p)" class="btn btn-danger" *ngIf="serviciologin.adminlogueado">Borrar</button>
+    </div>
+  </div>
+</div>

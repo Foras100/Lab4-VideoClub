@@ -1,0 +1,61 @@
+{
+  "pelicula": [
+    {
+      "titulo": "Up!",
+      "descripcion": "Una aventura de altura",
+      "imagen": "https://akns-images.eonline.com/eol_images/Entire_Site/2014421/rs_560x404-140521141529-up2.jpg?fit=inside|900:auto&output-quality=90",
+      "genero": "Animada",
+      "valores": [],
+      "alquilada": false,
+      "cantidadAlquileres": 0,
+      "valoracion": 0,
+      "id": 2
+    },
+    {
+      "titulo": "Batman 2",
+      "descripcion": "descripcion de batman",
+      "imagen": "https://vignette.wikia.nocookie.net/batman/images/2/23/Batman_The_Dark_Knight_Returns_1.jpg/revision/latest?cb=20120914031914&path-prefix=es",
+      "genero": "Accion",
+      "valores": [],
+      "alquilada": false,
+      "cantidadAlquileres": 0,
+      "valoracion": 0,
+      "id": 3
+    },
+    {
+      "titulo": "Yo Robot",
+      "descripcion": "Domiados por robots",
+      "imagen": "https://vignette.wikia.nocookie.net/doblaje/images/4/45/Yo_Robot.png/revision/latest?cb=20140702232850&path-prefix=es",
+      "genero": "Ciencia Ficcion",
+      "valores": [],
+      "alquilada": false,
+      "cantidadAlquileres": 0,
+      "valoracion": 0,
+      "id": 4
+    },
+    {
+      "titulo": "Los 8 mas odiados",
+      "descripcion": "Las 8 personas mas odiadas del oeste",
+      "imagen": "http://www.dvdplanet.cl/image/cache/catalog/HOLA/los-8-mas-odiados-c_5988_poster2-500x500.jpg",
+      "genero": "Comedia, Accion",
+      "valores": [],
+      "alquilada": false,
+      "cantidadAlquileres": 0,
+      "valoracion": 0,
+      "id": 5
+    }
+  ],
+  "usuario": [
+    {
+      "id": 1,
+      "nombre": "Luciano",
+      "apellido": "Forastieri",
+      "usuario": "user",
+      "contrasena": "user",
+      "telefono": null,
+      "correo": "lforas@hotmail.com",
+      "peliActual": null,
+      "estado": false
+    }
+  ]
+}
