@@ -28,6 +28,8 @@
       <input type="text" class="form-control" name="t" placeholder="Imagen" [(ngModel)]="peli.imagen">
     </div>
     <br>
-    <button class="btn btn-info" (click)="editar()">OK</button> <button class="btn btn-danger" (click)="borrar()">Borrar</button>
+    <a>  </a><button class="btn btn-info" (click)="editar()">OK</button><a>  </a> 
+    <button class="btn btn-danger" (click)="borrar()">Borrar</button><a>  </a> 
+    <button class="btn btn-info" [routerLink]="['/listapeliculas']">Cancelar</button>
   </div>
 </form>

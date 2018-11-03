@@ -9,6 +9,7 @@ import { LoginServiceService } from './login-service.service';
 })
 export class PeliculaServiceService {
 
+  peliActual:Pelicula;
   peliculasObs:Observable<Pelicula[]>
   peliculas:Pelicula[]=[];
   host:string="http://localhost:3001/pelicula"
@@ -18,23 +19,27 @@ export class PeliculaServiceService {
   }
 
   devolverPeli(){
-    let id:number=this.servicioLogin.userActual.id;
-    this.servicioLogin.userActual.peliActual=null;
-    this.servicioLogin.editarUsuario(this.servicioLogin.userActual);
-    this.getPelicula(id).subscribe(p=>{
+   
+    console.log("metodo devolver");
+    this.getPelicula(this.servicioLogin.userActual.peliActual).subscribe(p=>{
+      console.log("retorno "+p);
       p.alquilada=false;
       this.editarPelicula(p);
+      alert("Pelicula devuelta");
+      this.servicioLogin.setPeliActual(null)
     });
+    
+
   }
-
-
   alquilarPelicula(p:Pelicula){
+    this.servicioLogin.addHistorial(p);
     p.alquilada=true;
     p.cantidadAlquileres++;
-    this.servicioLogin.userActual.peliActual=p.id;
-    this.servicioLogin.editarUsuario(this.servicioLogin.userActual);
-    this.servicioLogin.getUsuarios();
     this.editarPelicula(p);
+    this.servicioLogin.setPeliActual(p.id);
+    //this.servicioLogin.editarUsuario(this.servicioLogin.userActual);
+    //this.servicioLogin.getUsuarios();
+    
   }
 
   getObservable(){
@@ -76,12 +81,14 @@ export class PeliculaServiceService {
     return this.http.get<Pelicula>(this.host+'/'+id);
   }
   valorarPelicula(p:Pelicula,valor:number){
-    p.valores.push(valor);
+    let val=p.valores;
+    val.push(+valor);
     let suma:number=0;
-    for(var i=0;i<p.valores.length;i++){
-        suma=+suma+p.valores[i]
+    for(var i=0;i<val.length;i++){
+        suma=+suma+val[i]
     }
-    p.valoracion=(suma/p.valores.length);
+    p.valoracion=(+suma/+val.length);
+    p.valores=val;
     this.editarPelicula(p);
   }
 

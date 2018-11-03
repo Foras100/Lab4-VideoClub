@@ -23,8 +23,6 @@ export class Usuario {
             this.correo=correo;
             this.peliActual=null;
             this.estado=false;
-    }
-    addPelicula(p:Pelicula){
-        this.historial.push(p);
+            this.historial=[];
     }
 }

@@ -9,6 +9,7 @@ import { ListaPeliculasComponent } from './Componentes/lista-peliculas/lista-pel
 import { ListaUsuariosComponent } from './Componentes/lista-usuarios/lista-usuarios.component';
 import { MasValoradasComponent } from './Componentes/mas-valoradas/mas-valoradas.component';
 import { MasAlquiladasComponent } from './Componentes/mas-alquiladas/mas-alquiladas.component';
+import { HistorialComponent } from './Componentes/historial/historial.component';
 
 const routes: Routes = [
   {path:'listapeliculas', component: ListaPeliculasComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'usuarios/:id', component: InfoUsuarioComponent},
   {path:'masvaloradas', component: MasValoradasComponent},
   {path:'masalquiladas', component: MasAlquiladasComponent},
+  {path:'historial/:id', component: HistorialComponent},
   {path:'login', component: LoginComponent},
   {path:'', redirectTo:'login', pathMatch:'full'}
 ];

@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
   <div class="card-body">
     <h5 class="card-title">{{pelicula.titulo}}</h5>
     <p class="card-text">Descripcion: {{pelicula.descripcion}}</p>
@@ -16,4 +16,27 @@
     <button *ngIf="servicioLogin.userActual.usuario!='admin'" (click)="alquilar()">Alquilar</button>
   </div>
   <img class="card-img-bottom" src={{pelicula.imagen}} alt="Card image cap">
+</div> -->
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+    <img class="img-fluid" style="height: 70vh; width:65vh" src={{pelicula.imagen}} alt="">
+  </div>
+
+  <div class="col-md-4">
+    <h3 class="my-3">{{pelicula.titulo}}</h3>
+    <p>{{pelicula.descripcion}}</p>
+    <br>
+    <p class="card-text"><small class="text-muted">Valoracion: {{pelicula.valoracion}} de 10</small></p>
+    <label for="exampleFormControlSelect1">Valorar con:</label>
+      <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]='valor'>
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+      </select>
+      <button (click)="valorar()">Valorar</button>
+      <br><h3 style="color: red" *ngIf="pelicula.alquilada">Pelicula Alquilada</h3>
+      <br>
+      <button *ngIf="servicioLogin.userActual.usuario!='admin'" (click)="alquilar()">Alquilar</button>
+  </div>
+</div>
 </div>

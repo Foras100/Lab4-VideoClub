@@ -12,6 +12,7 @@ import { Pelicula } from '../../Clases/pelicula';
 export class MasAlquiladasComponent implements OnInit {
 
   pelis:Pelicula[]=[];
+
   constructor(private serviciologin:LoginServiceService,private servicioPeli:PeliculaServiceService
     ,private router:Router) {
       if(this.serviciologin.userActual==null){
@@ -20,13 +21,14 @@ export class MasAlquiladasComponent implements OnInit {
       servicioPeli.getObservable().subscribe((pelicula:Pelicula[])=>{
         this.pelis=pelicula;
         this.pelis.sort((a:Pelicula,b:Pelicula)=>{
-          if(a.valoracion-b.valoracion>0){
+          if(a.cantidadAlquileres-b.cantidadAlquileres>0){
             return -1;
           }
         else{
           return 1;
         }})
       });
+      console.log(this.pelis);
      }
 
      verInfo(p:Pelicula){

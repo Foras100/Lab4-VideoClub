@@ -4,6 +4,7 @@ import { Usuario} from '../Clases/usuario';
 import { Observable } from 'rxjs';
 //import { UsuarioI } from '../Interfaces/usuario-i';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { Pelicula } from '../Clases/pelicula';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,22 @@ export class LoginServiceService {
     }
     this.getUsuarios();
     //console.log(this.usuariosObs)
+  }
+  setPeliActual(id:number){
+    if(id==null){
+      this.userActual.peliActual=null;
+    this.editarUsuario(this.userActual);  
+    }
+    else{
+      this.userActual.peliActual=id;
+      this.editarUsuario(this.userActual);
+    }
+  }
+  addHistorial(p:Pelicula){
+    let histo:Pelicula[]=this.userActual.historial;
+    histo.push(p);
+    this.userActual.historial=histo;
+    this.editarUsuario(this.userActual);
   }
   getUsuario(id:number){
     return this.http.get<Usuario>(this.host+'/'+id);

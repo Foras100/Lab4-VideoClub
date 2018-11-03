@@ -13,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ListaUsuariosComponent } from './Componentes/lista-usuarios/lista-usuarios.component';
 import { MasValoradasComponent } from './Componentes/mas-valoradas/mas-valoradas.component';
 import { MasAlquiladasComponent } from './Componentes/mas-alquiladas/mas-alquiladas.component';
+import { HistorialComponent } from './Componentes/historial/historial.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MasAlquiladasComponent } from './Componentes/mas-alquiladas/mas-alquila
     ListaPeliculasComponent,
     ListaUsuariosComponent,
     MasValoradasComponent,
-    MasAlquiladasComponent
+    MasAlquiladasComponent,
+    HistorialComponent
   ],
   imports: [
     BrowserModule,

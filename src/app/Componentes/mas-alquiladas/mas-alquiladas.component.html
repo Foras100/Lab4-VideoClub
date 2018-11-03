@@ -1,4 +1,4 @@
-<div class="card-deck" >
+<!-- <div class="card-deck" >
   <div class="card">
     <img class="card-img-top" src={{pelis[0].imagen}} alt="Card image cap">
     <div class="card-body">
@@ -26,4 +26,62 @@
       <button class="btn btn-info" (click)="verInfo(pelis[2])">Ver Info</button><button  (click)="borrar(p)" class="btn btn-danger" *ngIf="serviciologin.adminlogueado">Borrar</button>
     </div>
   </div>
-</div>
+</div> -->
+
+<div class="card-deck">
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100" >
+        <div style="height:350px">
+          <a><img class="card-img-top" style="height: 100%; width:100%" src={{pelis[0].imagen}} alt="Card image cap"></a>
+        </div>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a>{{pelis[0].titulo}}</a>
+        </h4>
+        <p class="card-text">{{pelis[0].descripcion}}</p>
+        <br>
+        <p class="card-text">Valoracion: {{pelis[0].valoracion}} de 10</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-info" (click)="verInfo(p)">Ver Info</button><button  (click)="borrar(p)" class="btn btn-danger" *ngIf="serviciologin.adminlogueado">Borrar</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100" >
+        <div style="height:350px">
+            <a><img class="card-img-top" style="height: 100%; width:100%" src={{pelis[1].imagen}} alt=""></a>
+        </div>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a>{{pelis[1].titulo}}</a>
+        </h4>
+        <p class="card-text">{{pelis[1].descripcion}}</p>
+        <br>
+        <p class="card-text">Valoracion: {{pelis[1].valoracion}} de 10</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-info" (click)="verInfo(p)">Ver Info</button><button  (click)="borrar(p)" class="btn btn-danger" *ngIf="serviciologin.adminlogueado">Borrar</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100" >
+        <div style="height:350px">
+            <a><img class="card-img-top" style="height: 100%; width:100%" src={{pelis[2].imagen}} alt=""></a>
+        </div>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a>{{pelis[2].titulo}}</a>
+        </h4>
+        <p class="card-text">{{pelis[2].descripcion}}</p>
+        <br>
+        <p class="card-text">Valoracion: {{pelis[2].valoracion}} de 10</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-info" (click)="verInfo(p)">Ver Info</button><button  (click)="borrar(p)" class="btn btn-danger" *ngIf="serviciologin.adminlogueado">Borrar</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  

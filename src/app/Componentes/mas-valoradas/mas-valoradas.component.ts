@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class MasValoradasComponent implements OnInit {
   
-  pelis:Pelicula[];
+  pelis:Pelicula[]=[];
   
   constructor(private serviciologin:LoginServiceService,private servicioPeli:PeliculaServiceService
     ,private router:Router) {

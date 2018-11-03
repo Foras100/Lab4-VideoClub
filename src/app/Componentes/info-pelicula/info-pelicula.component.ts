@@ -27,6 +27,9 @@ export class InfoPeliculaComponent implements OnInit {
       console.log("no encontro peli")
       this.router.navigate(['/listapeliculas'])
     }
+    else{
+      this.servicioPelicula.peliActual=this.pelicula;
+    }
   }
   valorar(){
     if(!this.valorado){
@@ -38,8 +41,12 @@ export class InfoPeliculaComponent implements OnInit {
     }
   }
   alquilar(){
-    if(!this.pelicula.alquilada && this.servicioLogin.userActual.peliActual==null)
-    this.servicioPelicula.alquilarPelicula(this.pelicula);
+    if(!this.pelicula.alquilada && this.servicioLogin.userActual.peliActual==null){
+      this.servicioPelicula.alquilarPelicula(this.pelicula);
+    }
+    else{
+      alert("Pelicula no disponible")
+    }
   }
   ngOnInit() {
   }
